@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>header</header>
+{{ name }}, your mobile is {{ mobile }}
+<ul id="navigation">
+1
+</ul>
+
+<form method="post" enctype="multipart/form-data">
+
+    姓名：<input name="name" type="text">
+    电话：<input name="mobile" type="text">
+    验证码：<input name="captcha" type="text">
+    附件：<input name="img" type="file">
+    {% autoescape false %}
+    {{ captcha }}
+    {% endautoescape %}
+<button type="submit">提交</button>
+</form>
+<footer>footer1</footer>
+
+
+
+</body>
+</html>
